@@ -631,12 +631,11 @@ def _create_frequency_chart(sentiment_counts: pd.DataFrame, processed_domains: L
     plt.subplots_adjust(left=0.2, right=0.9, top=0.9, bottom=0.05)
     
     # Save figure
-    # Save figure
-    # output_path = os.path.abspath("../frontend/sentiment_frequency_chart.png")
-    # plt.savefig(output_path, dpi=100, bbox_inches='tight')
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.join(os.path.dirname(script_dir), "frontend", "sentiment_frequency_chart.png")
-    # output_path = os.path.abspath("../frontend/sentiment_frequency_chart.png")
+    current_file = os.path.abspath(__file__)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_file)))# )up from sentiment_analysis
+    
+    frontend_dir = os.path.join(project_root, "frontend")
+    output_path = os.path.join(frontend_dir, "sentiment_frequency_chart.png")
     plt.savefig(output_path, dpi=100, bbox_inches='tight')
     plt.close()
     
