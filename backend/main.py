@@ -6,6 +6,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 import uvicorn
+from gtts import gTTS
 import time
 import logging
 from io import BytesIO
@@ -44,7 +45,6 @@ def generate_hindi_audio_content(text: str) -> Optional[str]:
         Base64 encoded audio content or None if generation fails
     """
     try:
-        from gtts import gTTS
         audio_bytes = BytesIO()
         tts = gTTS(text=text, lang='hi', slow=False)
         tts.write_to_fp(audio_bytes)
@@ -153,7 +153,7 @@ def generate_article_comparisons(articles: List[Dict[str, Any]], company_name: s
         # Use rate limited OpenAI call
         response = rate_limited_openai_call(
             client.chat.completions.create,
-            model="gpt-3.5-turbo",
+            model="gpt-4o-2024-08-06",
             messages=[
                 {"role": "system", "content": "You are a financial analyst providing article comparisons."},
                 {"role": "user", "content": prompt}
