@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Set, Optional, Tuple, Union
 import time
 import random
 
-from article_processor import process_urls_in_parallel
+from .article_processor import process_urls_in_parallel
 
 # Constants
 USER_AGENTS = [
