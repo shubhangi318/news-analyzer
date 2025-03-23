@@ -10,7 +10,7 @@ import requests
 from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 
-from search_engines import search_google_news, search_bing_news, search_yahoo_news
+from .search_engines import search_google_news, search_bing_news, search_yahoo_news
 
 
 def create_session_with_retry() -> requests.Session:
