@@ -106,10 +106,6 @@ The application follows a client-server architecture:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 📬 Contact
 
-For any questions or suggestions, please open an issue in the GitHub repository.
+For any questions or suggestions, please drop an email to shubhangi318@gmail.com. Thanks!
